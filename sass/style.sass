@@ -1,0 +1,196 @@
+@import color
+@import media
+@font-face
+  font-family: 'HelveticaNeue'
+  src: url(../font/HelveticaNeueCyr-Light.ttf)
+*
+  box-shadow: border-box
+body
+  background: $dark_grey
+  color: $white
+  font-size: 16px
+  font-family: 'HelveticaNeue'
+a
+  color: inherit
+  text-decoration: none
+.container
+  width: 1200px
+  margin: 0 auto
+  +size-xl
+    width: 90%
+%font_size48
+  font-size: 48px
+%font_size36
+  font-size: 36px
+%font_size24
+  font-size: 24px
+%font_size36
+  font-size: 21px
+%font_size36
+  font-size: 18px
+%array_down
+  &:hover
+    color: $white
+    &::after
+      opacity: 1
+  &::after
+    content: ''
+    width: 25px
+    height: 12px
+    background: url(../img/ic-arrow-down.png) 10px 110% no-repeat
+    display: inline-block
+    opacity: 0
+.header_container
+  padding: 11px 0
+  display: flex
+  align-items: center
+  position: relative
+  +size-xl
+    padding: 11px 0
+    justify-content: space-between
+.menu
+  margin-left: 200px
+  +size-s
+    display: none
+  +size-xl
+    margin-left: 0
+.menu_list
+  margin-right: 47px
+  display: inline-block
+  color: $light_grey
+  @extend %array_down
+  +size-xl
+    margin-right: 20px
+  +size-s
+    margin: 30px 0
+.header_input
+  width: 210px
+  padding: 9px 16px
+  border-radius: 4px
+  border: 1px solid $grey
+  +size-xl
+    width: 100px
+  +size-xs
+   display: none
+  &::placeholder
+    color: $text_grey
+    opacity: 0.4
+.header_login
+  color: $light_grey
+  display: inline-block
+  margin-left: 30px
+  &::before
+    content: ''
+    width: 40px
+    height: 20px
+    background: url(../img/ic-user.png) 10px 110% no-repeat
+    display: inline-block
+    @extend %array_down
+  +size-m
+    margin-left: 10px
+%burger_line
+  width: 35px
+  height: 4px
+  border-radius: 4px
+  background: $green
+  display: inline-block
+.burger_menu
+  cursor: pointer
+  display: none
+  span
+    @extend %burger_line
+    &::before
+      content: ""
+      @extend %burger_line
+      margin-top: 13px
+    &::after
+      content: ""
+      @extend %burger_line
+      margin-bottom: 4px
+  +size-s
+    display: inline-block
+.active
+  display: flex
+  flex-direction: column
+  position: absolute
+  top: 0
+  background: lighten($dark_grey, 20%)
+  padding: 0 10%
+  z-index: 10
+  border-radius: 10px
+.slider_wrapper.slick-slide.slick-current.slick-active, .slick-list.draggable, .slick-track
+  height: 644px
+  +size-s
+    height: 400px
+.slider_wrapper
+  width: 100%
+  background: url(../upload/header-slider.jpg) no-repeat
+  background-size: cover
+.slider_container
+  max-width: 390px
+  margin-top:18%
+  margin-right: 13%
+  +size-xl
+    margin-right: 0
+    margin-left: 15%
+  +size-s
+    margin-top: 40px
+.slider_title
+  @extend %font_size48
+.slider_text
+  @extend %font_size24
+.slider_buttons
+  margin-top: 134px
+  display: flex
+  +size-xs
+    flex-direction: column
+.slider_buttons_button
+  width: 148px
+  height: 38px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $button_grey
+  border-radius: 4px
+  &:first-child
+    margin-right: 13px
+    +size-xs
+      margin: 0 0 20px 0
+  &:hover
+    background: $green
+.bg_second
+  width: 100%
+  background: url(../upload/bg-content.jpg) no-repeat
+  background-size: cover
+.bg_third
+  width: 100%
+  background: url(../upload/content1.jpg) no-repeat
+  background-size: cover
+.slick-next
+  right: 57px
+  top: 50%
+  &::before
+    width: 15px
+    height: 20px
+    content: ""
+    position: absolute
+    right: 15px
+    background: url(../img/icon-prev.png) no-repeat
+    transform: rotate(180deg)
+  +size-s
+    top: 35%
+    right: 10px
+.slick-prev
+  z-index: 100
+  top: 50%
+  left: 57px
+  &::before
+    left: 10px
+    width: 15px
+    height: 20px
+    content: ""
+    position: absolute
+    background: url(../img/icon-prev.png) no-repeat
+  +size-s
+    top: 35%
+    left: 10px
