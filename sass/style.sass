@@ -24,10 +24,12 @@ a
   font-size: 36px
 %font_size24
   font-size: 24px
-%font_size36
+%font_size21
   font-size: 21px
-%font_size36
+%font_size18
   font-size: 18px
+%font_size14
+  font-size: 14px
 %text_align
   text-align: center
 %array_down
@@ -144,6 +146,8 @@ a
 .slider_buttons
   margin-top: 134px
   display: flex
+  +size-xl
+    margin-top: 40px
   +size-xs
     flex-direction: column
 .slider_buttons_button
@@ -211,7 +215,7 @@ a
   +size-m
     font-size: 35px
 .promo_text
-  font-size: 36px
+  @extend %font_size36
   text-align: center
   margin: 7px 0 42px
   +size-m
@@ -251,7 +255,7 @@ a
   background: $light_grey url(../img/promo-3.png) 50% no-repeat
 .promo_wrapper_item_title
   margin: 22px 21px 13px
-  font-size: 18px
+  @extend %font_size18
   +size-m
     margin-top: 0
 .promo_wrapper_item_text
@@ -288,7 +292,7 @@ a
       display: none
 .content_title
   margin-bottom: 27px
-  font-size: 36px
+  @extend %font_size36
   text-align: center
   +size-m
     font-size: 26px
@@ -317,10 +321,10 @@ a
   height: 180px
   border-radius: 4px 4px 0 0
 .content_item_title
-  font-size: 18px
+  @extend %font_size18
   margin: 22px 21px 16px
 .content_item_text
-  font-size: 21px
+  @extend %font_size21
   margin-left: 21px
 .content_item_button
   width: 250px
@@ -343,7 +347,7 @@ a
   height: 53px
   background: $button_grey
   color: $white
-  font-size: 21px
+  @extend %font_size21
   padding: 11px 0
   margin: 0 auto
   border-radius: 4px
@@ -355,3 +359,81 @@ a
     background: $green
   +size-xl
     margin-top: 40px
+.design
+  width: 100%
+  background: url(../upload/bg-design.jpg) no-repeat
+  background-size: cover
+  padding: 144px 0
+  +size-xl
+    padding: 70px 0
+  +size-xs
+    padding: 40px 0
+.design_title
+  @extend %font_size48
+  +size-m
+    font-size: 36px
+.design_text
+  @extend %font_size24
+  max-width: 530px
+  line-height: 28px
+  margin: 9px 0 37px
+  +size-m
+    font-size: 18px
+.design_wrapper
+  display: flex
+  +size-xs
+    flex-direction: column
+.design_wrapper_link
+  padding: 20px 60px 20px 51px
+  background: $button_grey
+  border-radius: 4px
+  &:last-child
+    padding: 20px 23px
+    margin-left: 15px
+    +size-xs
+      margin: 10px 0 0 0
+  &:hover
+    background: $green
+.header_footer
+  padding: 58px 0 49px
+.header_footer_container
+  display: flex
+  justify-content: space-between
+.header_footer_item
+  display: flex
+  flex-direction: column
+.header_footer_item_title
+  @extend %font_size18
+  color: $green
+.header_footer_item_link
+  @extend %font_size14
+  color: $white
+  display: inline-block
+  margin-top: 30px
+  &:hover
+    color: darken($green, 20%)
+.header_footer_item_wrapper
+  margin-top: 30px
+  display: flex
+.header_footer_item_social
+  width: 20px
+  height: 20px
+  display: inline-block
+  margin-right: 20px
+  transition: .2s
+  &:hover
+    transform: scale(1.2)
+.fb
+  background: url(../img/ic-fb.png) 50% no-repeat
+.tw
+  background: url(../img/ic-tw.png) 50% no-repeat
+.insta
+  background: url(../img/ic-insta.png) 50% no-repeat
+  margin-right: 0
+.footer_container
+  border-top: 1px solid $white
+  padding: 19px 0 38px
+  display: flex
+  justify-content: space-between
+  +size-m
+    font-size: 14px
