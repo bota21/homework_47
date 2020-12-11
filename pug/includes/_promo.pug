@@ -1,0 +1,33 @@
+-   
+    let promoArray = [{
+    className: 'promo_img_first',
+    title:'XBOX ONE X',
+    text: 'Faster Processing Smoother Gameplay',
+    button: `Explore Consoles & Accessories`
+    },
+    {
+    className: 'promo_img_second',
+    title:'mixer Streaming',
+    text: 'The Next Generation Of Life Game Streaming',
+    button: 'Start Watching mixer'
+    },
+    { 
+    className: 'promo_img_third',
+    title:'Free Games Every Month',
+    text: 'Get up to 700 in free games',
+    button: 'Get Free Games'
+    }]
+mixin promo_wrapper(className, title, text, button)
+  .promo_wrapper_item
+    div(class=`promo_wrapper_item_img ${className}`)
+    .promo_wrapper_item_title= title
+    .promo_wrapper_item_text= text
+    a(href="#").promo_wrapper_item_button= button
+
+.promo
+  .container.promo_container
+    h2.promo_title The best value
+    p.promo_text in games and entertainment
+    .promo_wrapper
+      each promo in promoArray
+        +promo_wrapper(promo.className, promo.title, promo.text, promo.button)

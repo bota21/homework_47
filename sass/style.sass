@@ -28,6 +28,8 @@ a
   font-size: 21px
 %font_size36
   font-size: 18px
+%text_align
+  text-align: center
 %array_down
   &:hover
     color: $white
@@ -71,7 +73,7 @@ a
   +size-xl
     width: 100px
   +size-xs
-   display: none
+    display: none
   &::placeholder
     color: $text_grey
     opacity: 0.4
@@ -128,7 +130,7 @@ a
   background-size: cover
 .slider_container
   max-width: 390px
-  margin-top:18%
+  margin-top: 18%
   margin-right: 13%
   +size-xl
     margin-right: 0
@@ -194,3 +196,162 @@ a
   +size-s
     top: 35%
     left: 10px
+.promo_container
+  padding: 143px 0 162px
+  background: url(../img/xbox.png) 50% 63px no-repeat
+  +size-xl
+    padding: 130px 0 50px
+  +size-m
+    padding: 70px 0 20px
+    background: url(../img/xbox.png) 50% 20px no-repeat
+    background-size: 15%
+.promo_title
+  @extend %font_size48
+  text-align: center
+  +size-m
+    font-size: 35px
+.promo_text
+  font-size: 36px
+  text-align: center
+  margin: 7px 0 42px
+  +size-m
+    font-size: 22px
+    margin-bottom: 20px
+.promo_wrapper
+  color: $text_grey
+  display: flex
+  justify-content: center
+.promo_wrapper_item
+  margin-right: 65px
+  width: 320px
+  background: $white
+  border-radius: 4px
+  &:first-child
+    +size-xs
+      margin-right: 0
+  &:nth-child(2)
+    +size-m
+      margin-right: 0
+    +size-xs
+      display: none
+  &:last-child
+    margin-right: 0
+    +size-m
+      display: none
+.promo_wrapper_item_img
+  width: 100%
+  height: 180px
+  display: block
+.promo_img_first
+  background: url(../upload/promo-xbox.jpg) no-repeat
+  background-size: 101%
+.promo_img_second
+  background: $light_grey url(../img/promo-2.png) 50% no-repeat
+.promo_img_third
+  background: $light_grey url(../img/promo-3.png) 50% no-repeat
+.promo_wrapper_item_title
+  margin: 22px 21px 13px
+  font-size: 18px
+  +size-m
+    margin-top: 0
+.promo_wrapper_item_text
+  font-size: 22px
+  line-height: 28px
+  margin: 0 21px
+.promo_wrapper_item_button
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  background: $green
+  border-radius: 4px
+  color: $white
+  padding: 19px 0
+  margin: 38px 21px 27px
+  &:hover
+    background: $button_grey
+  +size-m
+    margin: 18px 21px 27px
+.content
+  width: 100%
+  background: url(../upload/bg-content.jpg) no-repeat
+  background-size: cover
+  padding: 97px 0 140px
+  display: flex
+  flex-direction: column
+  +size-xl
+    padding: 50px 0
+  .slick-next
+    top: -8%
+  .slick-prev
+    &::before
+      display: none
+.content_title
+  margin-bottom: 27px
+  font-size: 36px
+  text-align: center
+  +size-m
+    font-size: 26px
+.content_item
+  height: 462px
+  background: $white_opacity
+  margin-right: 16px
+  color: $text_grey
+  border-radius: 4px
+  position: relative
+  display: flex  
+  overflow: hidden
+  +size-m
+    height: 400px
+  &.element.style.slick-slide.slick-current.slick-active
+    width: 320px
+    +size-m
+      width: 280px
+.slider_wrapper.slick-slide.slick-current.slick-active, .slick-list.draggable, .slick-track
+  +size-xl
+    height: 450px
+  +size-m
+    height: 400px
+.content_item_img
+  width: 100%
+  height: 180px
+  border-radius: 4px 4px 0 0
+.content_item_title
+  font-size: 18px
+  margin: 22px 21px 16px
+.content_item_text
+  font-size: 21px
+  margin-left: 21px
+.content_item_button
+  width: 250px
+  margin: 43px 21px 0
+  background: $green
+  padding: 19px 0
+  border-radius: 4px
+  color: $white
+  position: absolute
+  bottom: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    background: $button_grey
+  +size-m
+    width: 150px
+.content_button
+  width: 207px
+  height: 53px
+  background: $button_grey
+  color: $white
+  font-size: 21px
+  padding: 11px 0
+  margin: 0 auto
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &:hover
+    background: $green
+  +size-xl
+    margin-top: 40px
